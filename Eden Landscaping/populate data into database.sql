@@ -1,18 +1,88 @@
 -- 2 Suppliers
-INSERT INTO Supplier (Category, Name, Address1, Address2, City, State, ZIP, PhoneOrders, ContactName, ContactPhone, ShippingBillingTerms, Notes, Preferred)
+INSERT INTO Supplier (
+	Category, 
+    Name, 
+    Address1, 
+    Address2, 
+    City, 
+    State, 
+    ZIP, 
+    PhoneOrders, 
+    ContactName, 
+    ContactPhone, 
+    ShippingBillingTerms, 
+    Notes, 
+    Preferred
+)
 VALUES
-('Mulch', 'A.A. "Buck" Jones & Assoc, Inc', 'N/A', '', 'Grayson', 'GA', '34217', '770-963-8227', 'N/A', '770-963-8227', 'Net 30 days', 'Fax: 770-339-0899', 1),
-('Live Stock', 'Basler Tree Farm & Nursery', '2953 Yaeger Rd', '', 'Saint Louis', 'MO', '63129', '314-487-4698', 'N/A', '314-487-4698', 'Prepay', 'No Fax', 0),
-('Gravel', 'Dirt Cheap Landscape', '2900 N Highway 7', '', 'Hot Springs Village', 'AR', '71909', '501-623-5099', 'N/A', '501-623-5099', 'Net 15 days', 'Fax: 501-412-3562', 0),
-('Stone', 'Garick Corporation', 'N/A', '', 'Cleveland', 'OH', '59763', '216-581-0100', 'N/A', '216-581-0100', 'Prepay', 'Fax: 216-581-4712', 0);
--- I debated removing the attributes like "ContactName" from the table since we're not going to use it, but I kept it there because in the real world, it's there just in case
+(
+	'Mulch', 
+    'A.A. "Buck" Jones & Assoc, Inc', 
+    'N/A', 
+    '', 
+    'Grayson', 
+    'GA', 
+    '34217', 
+    '770-963-8227', 
+    'N/A', 
+    '770-963-8227', 
+    'Net 30 days', 
+    'Fax: 770-339-0899', 
+    1
+),
+(
+	'Live Stock', 
+    'Basler Tree Farm & Nursery', 
+    '2953 Yaeger Rd', 
+    '', 'Saint Louis', 
+    'MO', 
+    '63129', 
+    '314-487-4698', 
+    'N/A', 
+    '314-487-4698', 
+    'Prepay', 
+    'No Fax', 
+    0
+),
+(
+	'Gravel', 
+	'Dirt Cheap Landscape', 
+	'2900 N Highway 7', 
+	'', 
+    'Hot Springs Village', 
+	'AR', 
+	'71909', 
+    '501-623-5099', 
+    'N/A', 
+    '501-623-5099', 
+    'Net 15 days', 
+    'Fax: 501-412-3562', 
+    0
+),
+(
+	'Stone', 
+    'Garick Corporation', 
+    'N/A', 
+    '', 
+    'Cleveland', 
+    'OH', 
+    '59763', 
+    '216-581-0100', 
+    'N/A', 
+    '216-581-0100', 
+    'Prepay', 
+    'Fax: 216-581-4712', 
+    0
+);
+-- I debated removing the attributes like "ContactName" from the table since we're not going to use it, 
+-- but I kept it there because in the real world, it's there just in case
 
 -- Inventory Items
 INSERT INTO InventoryItem (ItemSKU, Name, Type, Size, UnitOfMeasure, PurchasePrice, QtyAvailable, SupplierID)
 VALUES
 -- 8 Live Plant Stock
 ('TREE001', 'Red Maple', 'Tree', '6\'', 'Each', 30.00, 10, 2),
-('TREE002', 'American Walnut', 'Tree', '8\'', 'Each', 35.00, 8, 2),
+('TREE002', 'American Walnut', 'Tree', '6\'', 'Each', 35.00, 8, 2),
 ('SHRB001', 'Azalea "Red Bells"', 'Shrub', '2\'', 'Each', 12.00, 15, 2),
 ('SHRB002', 'Honeysuckle "Trumpet"', 'Shrub', '3\'', 'Each', 10.00, 20, 2),
 ('PER001', 'Hydrangea "Masja"', 'Perennial', '2\'', 'Each', 8.00, 25, 2),
